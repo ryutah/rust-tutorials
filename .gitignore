@@ -70,3 +70,4 @@ Cargo.lock
 **/*.rs.bk
 
 target/
+bin/
