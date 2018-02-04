@@ -31,3 +31,7 @@ impl Summarizable for Tweet {
         format!("@{}", self.username)
     }
 }
+
+pub fn notify<T: Summarizable>(item: T) {
+    println!("Breaking news! {}", item.summary());
+}
