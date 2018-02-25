@@ -1,5 +1,18 @@
+use std::fmt::Display;
+
 struct ImportantExcept<'a> {
     part: &'a str,
+}
+
+impl<'a> ImportantExcept<'a> {
+    fn level(&self) -> i32 {
+        3
+    }
+
+    fn announce_and_return_part(&self, announcement: &str) -> &str {
+        println!("Attension please: {}", announcement);
+        self.part
+    }
 }
 
 fn main() {
@@ -15,6 +28,9 @@ fn main() {
         part: first_sentence,
     };
     println!("Th ImportantExcept : {}", i.part);
+
+    let result = longest_with_an_announcement(string1.as_str(), string2, "Accnoucement");
+    println!("The longest string is {}", result);
 }
 
 // Lifetime use because arg x and y is valid after return value.
@@ -29,6 +45,18 @@ fn main() {
 //  // result is invalid because it has stirng1 reference or string2 reference and string2 is delete above scope.
 //  println!("The longest string is {}", result);
 fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
+    if x.len() > y.len() {
+        x
+    } else {
+        y
+    }
+}
+
+fn longest_with_an_announcement<'a, T>(x: &'a str, y: &'a str, ann: T) -> &'a str
+where
+    T: Display,
+{
+    println!("Accnoucement {}", ann);
     if x.len() > y.len() {
         x
     } else {
