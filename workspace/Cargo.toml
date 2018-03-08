@@ -1,0 +1,9 @@
+[package]
+name = "workspace"
+version = "0.1.0"
+authors = ["ryutah <ryuta0221@gmail.com>"]
+
+[workspace]
+
+[dependencies]
+add-one = { path = "add-one" }
