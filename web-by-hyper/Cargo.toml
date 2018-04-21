@@ -1,8 +1,0 @@
-[package]
-name = "web-by-hyper"
-version = "0.1.0"
-authors = ["ryuta <ryuta.hara@topgate.co.jp>"]
-
-[dependencies]
-hyper = "0.11.2"
-futures = "0.1.14"
