@@ -1,5 +1,5 @@
 [package]
-name = "hello-web"
+name = "helloweb"
 version = "0.1.0"
 authors = ["ryutah <ryuta0221@gmail.com>"]
 
