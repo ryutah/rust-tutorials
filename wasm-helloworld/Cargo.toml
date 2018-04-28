@@ -1,0 +1,9 @@
+[package]
+name = "wasmhelloworld"
+version = "0.1.0"
+authors = ["ryutah <ryuta0221@gmail.com>"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
