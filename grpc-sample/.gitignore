@@ -1,0 +1,2 @@
+src/protos/diner.rs
+src/protos/diner_grpc.rs
