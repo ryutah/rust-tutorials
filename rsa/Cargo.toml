@@ -1,0 +1,8 @@
+[package]
+name = "rsa"
+version = "0.1.0"
+authors = ["ryutah <ryuta0221@gmail.com>"]
+
+[dependencies]
+ring = "*"
+openssl = "*"
